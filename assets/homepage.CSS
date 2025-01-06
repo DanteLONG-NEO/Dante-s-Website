@@ -1,0 +1,59 @@
+/*Content Style*/
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 60px;
+    flex-shrink: 0;
+    
+    align-items: top;
+
+    width: 1000px;
+
+    padding-top: 80px;
+}
+
+.text-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    margin-top: 0;
+    
+}
+
+.name{
+    align-items: top;
+}
+
+.intro{
+    align-items: center;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.contact svg{
+    height: 20px;
+    fill: rgba(0,0,0,0.3);
+    margin-right: 12px;
+    padding-bottom: 12px;
+}
+
+.linkedin{
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,0.3);
+
+    margin-bottom:12px;
+    margin-right: 36px;
+
+    line-height: 2;
+    font-size: 14px;
+    font-weight: 100;
+}

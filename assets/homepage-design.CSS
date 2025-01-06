@@ -1,0 +1,93 @@
+.project-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    flex-shrink: 0;
+
+    padding: 48px;
+}
+
+@media screen and (max-width: 900px) {
+    .project-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    
+        flex-shrink: 0;
+    
+        padding: 0;
+        padding-bottom: 12px;
+    }
+}
+
+.project-grid h1{
+    background-color: white;
+}
+
+.project-preview-container{
+    padding: 24px;
+    transition: transform 1s ease;
+    text-decoration: none;
+}
+
+.project-preview-container:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.project-preview-description h5{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 1.25;
+
+}
+
+.project-preview-description h6{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+#research{
+    overflow-y: scroll;
+}
+
+#design{
+    overflow-y: scroll;
+}
+    
+.reference{
+    padding: 72px;
+    display: flex;
+    flex-direction: column;
+}
+
+#research-project-grid{
+    margin: 0;
+}
+
+.reference div{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.reference a{
+    font-family: arial;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 6px;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.7);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.reference a:hover{
+    color: #eb6100;
+}

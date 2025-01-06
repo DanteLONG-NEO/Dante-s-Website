@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../../../icons/WebsiteLogo.png" type="image/png">
+        <title>Dante's Website</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../../../../assets/navigationbar-project.CSS">
+        <link rel="stylesheet" href="../../../../assets/general.CSS">
+        <link rel="stylesheet" href="../../../../assets/project.CSS">
+
+
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="navigation-bar">
+                <div class="left">
+                    <a href="../../../homepage.html"><img src="../../../../icons/home_icon.png"></a>
+                </div>
+                <div class="center">
+                    <a href="../../../zh/about/about.html">关于</a>
+                    <a href="../../../zh/design/design.html">设计</a>
+                    <a href="../../../zh/research/research.html">研究</a>
+                    <a href="../../../zh/media/media.html">媒体</a>
+                    <a href="../../../zh/sports/sports.html">运动</a>
+                    <a href="../../../zh/others/others.html">其他</a>
+                </div>
+                <div class="right"> 
+                    <a href="../../../en/design/4/projectPage.html">EN</a>
+                    <h6>|</h6>
+                    <a href="../../../zh/design/4/projectPage.html">中文</a>
+                </div>
+            </div>
+            <div class="project-page">
+                <div class="carousel-container">
+                    <button class="carousel-btn left" onclick="Left()">
+                        <img src="../../../../icons/arrow-left.png" style="height: 100%;">
+                    </button>
+                    <button class="carousel-btn right" onclick="scrollRight()">
+                        <img src="../../../../icons/arrow-right.png" style="height: 100%;">
+                    </button>
+                    <div class="arrow-down">
+                        <img src="../../../../icons/down.svg" style="height: 100%;">
+                    </div>
+                    <div class="carousel">
+                        <img src="../../../../images/design/6/Thum01.png" alt="Image 1">
+                        <img src="../../../../images/design/6/Thum02.png" alt="Image 2">
+                        <img src="../../../../images/design/6/Thum03.png" alt="Image 3">
+                        <img src="../../../../images/design/6/Thum04.png" alt="Image 4">
+                        <img src="../../../../images/design/6/Thum05.png" alt="Image 5">
+                        <img src="../../../../images/design/6/Thum06.png" alt="Image 6">
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="auto1080">
+                        <h5 class="project-name">佐治亚理工校园导航应用</h5>
+                        <dl class="detail clear">
+                            <dt>
+                                <h6>
+                                    项目来源于佐治亚理工人机交互项目studio作业。项目意图于优化佐治亚理工目前学生公共出行使用软件TransLoc。本项目着重于高保真原型设计以及设计原则的制定。<br>
+                                    <br>
+                                    1.用户研究<br>
+                                    我们采用了质性研究+量化研究的方式来调研用户在校园通勤过程中的行为习惯。一共收集到77份问卷反馈，并针对其中的10人展开了半结构访谈。通过对半结构访谈的要点整理，我们获得了三点主要的用户反馈：我在乔治亚理工学院导航和出行时遇到了很多问题、
+                                    我使用自己最熟悉或最舒适的工具来导航校园、
+                                    我在校园的不同区域导航时，自信程度有所不同。<br>
+                                    <br>
+                                    2.设计视觉语言<br>
+                                    该项目的问题领域涵盖学生在校园内出行时面临的困难，例如校园服务和地图导航。鉴于这些范围，我们选择了三所大学提供的校园导航服务案例（Stanford Mobile、Penn State Go、USCF Mobile），以及TransLoc和Google Maps进行分析，以获取更多见解。此外，乔治亚理工学院已发布了官方品牌指南，因此我们也研究了这些指南，以便将我们的设计理念与乔治亚理工学院的品牌形象无缝融合。<br><br>
+                                    这些案例分析可分为颜色构成、网格和轴结构以及视觉复杂性三类。我们使用Adobe Illustrator分析了每个案例的网格和轴结构，并利用Python评估其视觉复杂性。<br>
+                                    <br>
+                                    3.高保真原型评估及迭代<br>
+                                    针对我们的高保真原型设计，我们抽取了4名来自佐治亚理工人机交互的学生进行简化的用户反馈和可用性测试。结果表明目前的设计学习曲线较高，需要有登陆时的简介来引导用户更好适应应用功能。我们基于此对高保真原型进行了进一步迭代。<br>
+                                </h6>
+                                 
+                                <!--<div class="video-container">
+                                    <iframe width="100%" aspect-ratio="16 / 9"
+                                        src="https://www.youtube.com/embed/C1px5h9K3XM"
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>-->
+                                
+                            </dt>
+                            <dd>
+                                <h6>
+                                    设计类型: 用户体验设计，用户界面设计<br>
+                                    项目类型：佐治亚理工人机交互项目研究生studio项目<br>
+                                    <br>
+                                    时间: 2024.8-2024.12<br>
+                                    <br>
+                                    指导：Dr.Lynn Dombrowski(美)<br>
+                                    合作: Christine Taylor(美)、Isabella Sirianni(美)、陈旅疆<br>
+                                    <br>
+                                    主要贡献:<br>
+                                    1.用户调研阶段制定用户问卷、针对5名用户开展半结构访谈；<br>
+                                    2.对5个案例研究以及乔治亚理工学院的品牌标识进行了设计研究，独立创建了iOS用户界面系统的视觉语言指南，利用Adobe Illustrator、Figma和Python确保各种界面设计的一致性；<br>
+                                    3.使用Procreate、Adobe Illustrator和Adobe Photoshop制作了5个设计概念的故事板，通过收集用户反馈指导设计决策；<br>
+                                    4.主导了应用程序互动地图和个人资料功能的可访问性设计，根据4位用户的反馈迭代了15个线框图，使可访问性提高了10%；<br>
+                                    <br>
+                                    技能：Figma、Python、Procreate、Adobe Illustrator、Adobe Photoshop<br>
+                                </h6>
+                            </dd>
+                        </dl>
+                    </div> 
+                    <div class="art-gallery">
+                        <div class="auto1080">
+                            <div id="grid-container">
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/6/AG_01.png" alt="Image 1">
+                                </div>
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/6/AG_02.png" alt="Image 2">
+                                </div>
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/6/AG_03.png" alt="Image 3">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_04.png" alt="Image 4">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_05.png" alt="Image 5">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_06.png" alt="Image 6">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_07.png" alt="Image 7">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_08.png" alt="Image 8">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_09.png" alt="Image 9">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_10.png" alt="Image 10">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_11.png" alt="Image 11">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/6/AG_12.png" alt="Image 12">
+                                </div>
+                                <!-- 添加更多图片 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">作品版权及解释权归龙俊潇所有，<span>未经允许不得转载或引用</span></div>
+                </div>
+            </div>            
+        </div>
+        <div id="lightbox" class="hidden">
+            <button id="close-button">X</button>
+            <button id="prev-button">
+                <img src="../../../../icons/arrow-left.png">
+            </button>
+            <button id="next-button">
+                <img src="../../../../icons/arrow-right.png">
+            </button>
+            <img id="lightbox-image" src="" alt="Preview">
+        </div>
+        <script src="../../../../assets/project.js"></script>
+    </body>
+
+</html>

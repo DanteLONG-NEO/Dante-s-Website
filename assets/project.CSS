@@ -1,0 +1,270 @@
+.carousel-container {
+    position: fixed; /* Adjust as needed */
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    top: 80px;
+    bottom: 0;
+    width: 100vw;
+
+    z-index: 3;
+}
+
+.carousel-container::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+    flex-shrink: 0;
+    height: 100%;
+    
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+
+    width: 26px;
+    height: 98px;
+    object-fit: contain;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.carousel-btn.left {
+    left: 24px;
+}
+
+.carousel-btn.right {
+    right: 24px;
+}
+
+.arrow-down{
+    width: 62px;
+    height: 36px;
+    object-fit: contain;
+
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    z-index: 15;
+    margin-left: -31px;
+}
+
+.project-description{
+    position: relative;
+    
+    display: block;
+    z-index: 4;
+    margin-top: 100vh;
+
+    background-color: white;
+
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+    display: flow-root;
+}
+
+.auto1080{
+    display: flex;
+    flex-direction: column;
+    max-width: 1180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-name{
+    display: block;
+    font-size: 2em;
+    margin: 0;
+    font-size: 16px;
+    padding: 80px 0 12px;
+    letter-spacing: 1px;
+}
+
+dl {
+    display: block;
+}
+
+.detail dt {
+    float: left;
+    width: 59.32%;
+    display: block;
+    margin-bottom: 60px;
+}
+
+.detail dd {
+    display: block;
+    float: right;
+    width: 33.15%;
+    margin-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+@media screen and (max-width: 900px) {
+    .detail dt, .detail dd {
+        width: 100%;
+    }
+}
+
+.detail dd h6, .detail dt h6 {
+    margin-bottom: 60px;
+}
+
+.detail dt a{
+    color: rgba(0, 0, 0, 0.7);;
+    text-decoration: none;
+}
+
+.detail dd h6, .detail dd h6 a{
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    text-align: left;
+}
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 设置宽高比为 16:9 */
+}
+
+iframe, video {
+    width: 100%;
+    height: 100%;
+}
+
+/* Grid styles */
+.art-gallery{
+    background-color: #F7F7F7;
+    margin: 100px 0 0;
+    padding: 100px 0 70px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    #grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+.grid-item {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; 
+    overflow: hidden; 
+    image-rendering: auto;
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    cursor: pointer;
+    image-rendering: auto;
+}
+
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#lightbox.hidden {
+    display: none;
+}
+
+button {
+    position: absolute;
+    background: transparent;
+    color: white;
+    border: none;
+    
+    cursor: pointer;
+}
+
+#close-button {
+    top: 10px;
+    right: 10px;
+    height: 50px;
+}
+
+#prev-button {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    height: 50px;
+}
+
+#next-button {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    height: 50px;
+}
+
+.footer {
+    font-family: arial;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+    color: #AAA;
+    font-size: 12px;
+    background-color: #FFF;
+}
+
+@media screen and (max-width: 900px) {
+    .footer {
+        font-size: 10px;
+        padding: 25px 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer span {
+        display: block;
+    }
+}
