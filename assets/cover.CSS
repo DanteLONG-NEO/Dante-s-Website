@@ -48,6 +48,12 @@
     z-index: 2; /* 确保图片在文字上面 */
 }
 
+@media screen and (max-width: 900px) {
+    .cover-logo{
+        width: 50%;
+    }
+}
+
 /* 设置图片元素 */
 .cover-image {
     display: flex;

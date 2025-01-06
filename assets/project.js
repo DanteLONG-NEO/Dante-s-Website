@@ -46,6 +46,55 @@ window.addEventListener('resize', () => {
 });
 
 
+let currentIndex2 = 0;
+
+function scrollRightFrame() {
+    const carousel = document.querySelector('.carousel');
+    const images = carousel.querySelectorAll('iframe');
+    const imageWidth = window.innerWidth;
+
+    if (currentIndex2 < images.length - 1) {
+        // 如果不是最后一张图片，继续向右滑动
+        currentIndex2++;
+    } else {
+        // 如果已经是最后一张，跳回到第一张图片
+        currentIndex2 = 0;
+    }
+    updateCarouselTransform();
+}
+
+function LeftFrame() {
+    const carousel = document.querySelector('.carousel');
+    const images = carousel.querySelectorAll('iframe');
+    const imageWidth = window.innerWidth;
+
+    if (currentIndex2 > 0) {
+        // 如果不是第一张图片，正常向左滑动
+        currentIndex2--;
+    } else {
+        // 如果已经是第一张，跳到最后一张图片
+        currentIndex2 = images.length - 1;
+    }
+    updateCarouselTransform();
+}
+
+function updateCarouselTransform() {
+    const carousel = document.querySelector('.carousel');
+    const images = carousel.querySelectorAll('iframe');
+    const imageWidth = window.innerWidth;
+    
+    // 计算每张图片的宽度加上间隔
+    carousel.style.transform = `translateX(-${(imageWidth) * currentIndex2}px)`;
+}
+
+
+
+// 监听窗口大小变化，确保图片宽度更新并且只显示一个图像
+window.addEventListener('resize', () => {
+    updateCarouselTransform(); // 调整transform，确保在resize时位置正确
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const gridItems = document.querySelectorAll(".grid-item img");
     const lightbox = document.getElementById("lightbox");
