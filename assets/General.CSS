@@ -69,6 +69,6 @@ h6{
     margin-right: auto;
 }
 
-.project-preview-description h5{
+.project-preview-description h5, .project-preview-description h6{
     text-align: left;
 }
