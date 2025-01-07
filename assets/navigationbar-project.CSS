@@ -31,6 +31,12 @@
     flex-shrink: 0;
 }
 
+@media (max-width: 900px) {
+    .left{
+        padding-left: 24px;
+    }
+}
+
 .left img{
     height: 18px;
     cursor: pointer;
@@ -45,7 +51,7 @@
 }
 
 @media (max-width: 900px) {
-    .center {
+    .center{
       display: none;
     }
 }
@@ -60,6 +66,30 @@
     flex-direction: row;
     flex-shrink: 0;
     justify-content: right;
+    align-items: top;
+}
+
+@media (max-width: 900px) {
+    .right{
+      display: none;
+      padding-right: 24px;
+    }
+}
+
+.right img{
+    height: 18px;
+    justify-content: right;
+    cursor: pointer;
+}
+
+#menu, #closeMenu{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    #menu{
+        display: flex;
+    }
 }
 
 /*Text Style*/
@@ -100,5 +130,43 @@
     margin: 0px 6px;
     font-weight: 200;
     text-decoration: none;
+}
+
+.screen-navigation{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 48px;
+    display: block;
+    opacity: 0; /* 初始透明 */
+    visibility: hidden; /* 初始不可见 */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* 添加过渡效果 */
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+}
+
+.screen-navigation.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.screen-navigation a{
+    font-family: roboto, arial;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    padding-bottom: 24px;
+
+    color: rgba(0,0,0,0.5);
+}
+
+.screen-navigation a:hover{
+    color:#eb6100;
 }
 

@@ -6,7 +6,8 @@
 
     top: 80px;
     bottom: 0;
-    width: 100vw;
+    left: 0;
+    right: 0;
 
     z-index: 3;
 }
@@ -20,7 +21,7 @@
     transition: transform 0.5s ease; /* Smooth transition */
     flex-shrink: 0;
     height: 100%;
-    
+    width: 100%;
 }
 
 .carousel img {
@@ -67,6 +68,12 @@ button:hover{
     right: 24px;
 }
 
+@media screen and (max-width: 900px) {
+    .carousel-btn.right{
+        display: flex;
+    }
+}
+
 .arrow-down{
     width: 62px;
     height: 36px;
@@ -93,7 +100,7 @@ button:hover{
 }
 
 .project-name{
-    display: block;
+    display: inline-block;
     font-size: 2em;
     margin: 0;
     font-size: 16px;
