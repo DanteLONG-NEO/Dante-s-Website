@@ -150,7 +150,18 @@ dl {
 
 .video-container {
     width: 100%;
-    aspect-ratio: 16 / 9; /* 设置宽高比为 16:9 */
+    height: 16 / 9; /* 设置宽高比为 16:9 */
+}
+
+.Figma-container{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.Figma-container iframe{
+    height: 100%;
+    aspect-ratio: 9/16;
 }
 
 iframe, video {

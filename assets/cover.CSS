@@ -7,7 +7,7 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
-    animation: backgroundSlider 12s infinite;
+    animation: backgroundSlider 25s infinite;
 
     overflow-y: scroll; /* 保持滚动功能 */
     scrollbar-width: none; /* Firefox 隐藏滚动条 */
@@ -22,15 +22,22 @@
     0% {
         background-image: url('../images/projectCovers/0.png');
     }
-    33% {
-        background-image: url('../images/projectCovers/1.png');
+    20% {
+        background-image: url('../images/projectCovers/R4.png');
     }
-    66% {
-        background-image: url('../images/projectCovers/0.png');
+    40% {
+        background-image: url('../images/projectCovers/2.png');
+    }
+    60% {
+        background-image: url('../images/projectCovers/D6.png');
+    }
+    80% {
+        background-image: url('../images/projectCovers/1.png');
     }
     100% {
-        background-image: url('../images/projectCovers/1.png');
+        background-image: url('../images/projectCovers/D5.png');
     }
+    
 }
 
 .cover-logo{

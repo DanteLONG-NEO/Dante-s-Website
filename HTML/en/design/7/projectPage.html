@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../../../icons/WebsiteLogo.png" type="image/png">
+        <title>Dante's Website</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../../../../assets/navigationbar-project.CSS">
+        <link rel="stylesheet" href="../../../../assets/General.CSS">
+        <link rel="stylesheet" href="../../../../assets/project.CSS">
+
+
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="navigation-bar">
+                <div class="left">
+                    <a href="../../../../index.html"><img src="../../../../icons/home_icon.png"></a>
+                </div>
+                <div class="center">
+                    <a href="../../../en/about/index.html">About</a>
+                    <a href="../../../en/design/index.html">Research</a>
+                    <a href="../../../en/research/index.html">Design</a>
+                    <a href="../../../en/media/index.html">Media</a>
+                    <a href="../../../en/sports/index.html">Sports</a>
+                    <a href="../../../en/others/index.html">Others</a>
+                </div>
+                <div class="right"> 
+                    <a href="../../../en/design/7/projectPage.html">EN</a>
+                    <h6>|</h6>
+                    <a href="../../../zh/design/7/projectPage.html">中文</a>
+                </div>
+                <div class="right" id="menu">
+                    <img id="openMenu" src="../../../../icons/menu-black.svg">
+                    <img id="closeMenu" src="../../../../icons/close.svg">
+                </div>
+            </div>
+            <div id="fixedPage" class="screen-navigation" style=" align-items: right;">
+                <div class="auto1080">
+                    <a href="../../../en/about/index.html">About</a>
+                    <a href="../../../en/design/index.html">Research</a>
+                    <a href="../../../en/research/index.html">Design</a>
+                    <a href="../../../en/media/index.html">Media</a>
+                    <a href="../../../en/sports/index.html">Sports</a>
+                    <a href="../../../en/others/index.html">Others</a>
+                    <h6></h6>
+                    <div style="display: block;">
+                        <a href="../../../en/design/7/projectPage.html">EN</a>
+                        <a href="../../../zh/design/7/projectPage.html">中文</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page">
+                <div class="carousel-container">
+                    <button class="carousel-btn left" onclick="LeftFrame()">
+                        <img src="../../../../icons/arrow-left.png" style="height: 100%;">
+                    </button>
+                    <button class="carousel-btn right" onclick="scrollRightFrame()">
+                        <img src="../../../../icons/arrow-right.png" style="height: 100%;">
+                    </button>
+                    <div class="arrow-down">
+                        <img src="../../../../icons/down.svg" style="height: 100%;">
+                    </div>
+                    <div class="carousel">
+                        <iframe src="https://public.tableau.com/views/PixelDisplay/Dashboard2?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no" alt="Image 1"></iframe>
+                        <iframe src="https://public.tableau.com/views/Popularity_Subgenre/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no" alt="Image 2"></iframe>
+                        <iframe src="https://public.tableau.com/views/WordFrequencybyGenreandDecade_17331267844990/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no" alt="Image 3"></iframe>
+                        <iframe src="https://public.tableau.com/views/MelodyFeature/BPMTrend?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no" alt="Image 4"></iframe>
+                        <iframe src="https://public.tableau.com/views/MelodyFeature/PitchNVolumeTrend?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no" alt="Image 5"></iframe>
+                        <iframe src="https://public.tableau.com/views/SentimentSongs/BoomBap_1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no" alt="Image 6"></iframe>
+                        <iframe src="https://public.tableau.com/views/SentimentSongs/ConsciousHipHop?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no" alt="Image 7"></iframe>
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="auto1080">
+                        <h5 class="project-name">Hip Hop Subgenre Data Visualization</h5>
+                        <dl class="detail clear">
+                            <dt>
+                                <h6>
+                                    The project originates from the final assignment of the CS-6730-A Data Visualization Principles course at Georgia Tech. The aim of the project is to analyze the melodic and lyrical characteristics of 10 subgenres of hip-hop music, helping users better and more quickly understand the differences and connections between these subgenres, thereby deepening their understanding of hip-hop culture. Based on this, we designed a flexible data exploration experience for users, allowing them to start from different songs or subgenres based on their preferences and obtain various types of information.<br>
+                                    <br>
+                                    1. Data Retrieving<br>
+                                    We obtained a dataset of hip-hop music entries from 1970 to 2020 via the Genius API, which includes metadata such as release date, artist, subgenre type, and more. This dataset is frequently cited in related research. We filtered the dataset by subgenre, selecting 11 subgenres for analysis. Then, we selected the top 10 songs from each decade based on popularity.<br>
+                                    Using the Spotify API, we downloaded previews of these songs and processed them with a voice-background separation model. After separating the vocals from the background music, we analyzed the volume and pitch of the audio frame by frame. This allowed us to generate the raw data for visualizing the melody.<br>
+                                    For the lyrics, we used a simple AI sentiment analysis model to assess the emotional tone of each line of the lyrics. This allowed us to perform a sentiment polarity analysis, generating raw data for visualizing the emotional trends within the lyrics.<br>
+                                    <br>
+                                    2. Data Visualization<br>
+                                    We imported the processed raw data into Tableau for visualization and created a series of charts ranging from macro to micro perspectives.<br>
+                                    In Chapter 1, we focused on comparing the yearly trends of hip-hop music, providing users with a general understanding of its overall development over time.<br>
+                                    In Chapter 2, using trap (a subgenre of hip-hop) as an example, we compared the differences in melody and lyrical composition between different subgenres.<br>
+                                    In Chapter 3, we delved into the song level, showcasing the analysis of vocals and background sound from song previews. This allowed users to explore the music in greater detail.<br>
+                                    <br>
+                                    3. Data Insights<br>
+                                    Given that our data is quite specialized, it might be difficult for casual music enthusiasts to fully understand it. Therefore, we took screenshots of certain data points and added annotations to make it easier for users to comprehend the meaning and implications behind the data. This approach helps users more easily grasp the insights and context represented by the data.<br>
+                                    <br>
+                                    4. Website Development<br>
+                                    We compiled the above data visualizations and their meanings into an interactive website using HTML. This allows users to engage with the data more dynamically and explore the various visualizations and insights in a user-friendly manner. The website provides an intuitive platform for users to interact with and better understand the data.<br>
+                                </h6>
+                                 
+                                <div class="video-container">
+                                    <iframe width="100%" aspect-ratio="16 / 9"
+                                        src="https://www.youtube.com/embed/Q2Tf1ydaU-I"
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                
+                            </dt>
+                            <dd>
+                                <h6>
+                                    Design Type: Data Visualization<br>
+                                    Project Type：Final Project of CS-6730-A, Georgia Institute of Technology<br>
+                                    <br>
+                                    Time: 2024.8-2024.12<br>
+                                    <br>
+                                    Instructor：Dr.John Stasko(美)<br>
+                                    Collaborator: Hanna Fu、Wanting Mao、Yuxin Lin<br>
+                                    <br>
+                                    Main Contributions:<br>
+                                    1. Obtained the 1970-2020 hip-hop dataset from the Genius API;<br>
+                                    2. Performed data cleaning on the obtained dataset, including filtering by subgenre and popularity, as well as re-inputting invalid values;<br>
+                                    3. Downloaded song previews using the Spotify API, separated vocals and background music using a model, and used Python to analyze the audio frame by frame to extract metadata for visualization;<br>
+                                    4. Designed 9 data visualization charts using Tableau;<br>
+                                    5. Built the website using HTML, CSS, and JavaScript.<br>
+                                    <br>
+                                    Skill：Python、Tableau、HTML、CSS、JavaScript<br>
+                                </h6>
+                            </dd>
+                        </dl>
+                    </div> 
+                    <div class="art-gallery">
+                        <div class="auto1080">
+                            <div id="grid-container">
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/7/AG_01.png" alt="Image 1">
+                                </div>
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/7/AG_02.png" alt="Image 2">
+                                </div>
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/7/AG_03.png" alt="Image 3">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/7/AG_04.png" alt="Image 4">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/7/AG_05.png" alt="Image 5">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/7/AG_06.png" alt="Image 6">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/7/AG_07.png" alt="Image 7">
+                                </div>
+                                <!-- 添加更多图片 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">The copyright and interpretation rights of this work belong to Junxiao Long. <span>Unauthorized reproduction or citation is prohibited.</span></div>
+                </div>
+            </div>            
+        </div>
+        <div id="lightbox" class="hidden">
+            <button id="close-button">X</button>
+            <button id="prev-button">
+                <img src="../../../../icons/arrow-left.png">
+            </button>
+            <button id="next-button">
+                <img src="../../../../icons/arrow-right.png">
+            </button>
+            <img id="lightbox-image" src="" alt="Preview">
+        </div>
+        <script src="../../../../assets/projectIframe.js"></script>
+        <script src="../../../../assets/phoneScreen.js"></script>
+    </body>
+
+</html>
