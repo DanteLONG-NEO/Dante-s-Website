@@ -26,6 +26,10 @@
     
 }
 
+.text-container h5{
+    letter-spacing: 1px;
+}
+
 .text-container h6{
     margin-bottom: 48px;
 }
@@ -46,7 +50,7 @@
 
 .contact-container{
     display: flex;
-    margin-right: 24px;
+    margin-right: 64px;
 }
 
 @media screen and (max-width: 900px) {
