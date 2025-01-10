@@ -89,7 +89,7 @@
 }
 
 .page{
-    background-image: url('../../../images/background/backgroundBlur.jpg'); /* Google 图片链接 */
+    background-image: url('/images/background/backgroundBlur.jpg'); /* Google 图片链接 */
     background-size: cover;  /* 背景图像覆盖整个容器 */
     background-position: center;  /* 背景图像居中 */
     background-repeat: no-repeat;  /* 背景图像不重复 */
