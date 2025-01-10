@@ -16,6 +16,10 @@ body {
     scroll-snap-type: y mandatory; /* 强制每次滚动到页面中心 */
 }
 
+a{
+    text-decoration: none;
+}
+
 .h1,h2,h3,h4,h5,h6{
     font-family: arial;
     margin: 0;

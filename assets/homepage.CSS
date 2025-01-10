@@ -1,7 +1,7 @@
 /*Content Style*/
 .main-container{
     display: block;
-    padding-top: 200px;
+    padding-top: 75px;
 }
 
 .image-container{
@@ -30,10 +30,6 @@
     letter-spacing: 1px;
 }
 
-.text-container h6{
-    margin-bottom: 48px;
-}
-
 @media screen and (max-width: 900px) {
     .text-container, .image-container {
         width: 100%;
@@ -42,6 +38,7 @@
 
 .intro{
     align-items: center;
+    margin-bottom: 48px;
 }
 
 .contact{
@@ -89,7 +86,22 @@
 #aboutMe{
     display: flex;
     position: relative;
-    overflow: hidden;
+}
+
+.page{
+    background-image: url('../../../images/background/backgroundBlur.jpg'); /* Google 图片链接 */
+    background-size: cover;  /* 背景图像覆盖整个容器 */
+    background-position: center;  /* 背景图像居中 */
+    background-repeat: no-repeat;  /* 背景图像不重复 */
+}
+
+#backgroundImage{
+    position: absolute;  /* 绝对定位，填充整个容器 */
+    top: 0;
+    left: 0;
+    height: 100%;  /* 让图片高度适应容器 */
+    object-fit: cover;  /* 保持图片的宽高比，且填满容器 */
+    z-index: -1;  /* 将图片放在其他内容的下方 */
 }
 
 @media screen and (max-width: 900px) {
