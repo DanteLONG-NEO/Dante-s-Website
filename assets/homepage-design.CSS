@@ -99,6 +99,10 @@
     color: #eb6100;
 }
 
+.reference h5{
+    letter-spacing: 1px;
+}
+
 .selected-title-name{
     margin: 0;
     font-weight: 700;
@@ -114,7 +118,7 @@
 @media screen and (max-width: 900px){
     .selection-project-grid{
         display: grid;
-        gap: 24px;
+        gap: 48px;
         flex-shrink: 0;
         margin-top: 24px;
         margin-bottom: 48px;
@@ -167,6 +171,7 @@
     margin-bottom: 12px;
     line-height: 1.25;
     text-decoration: none;
+    letter-spacing: 0;
 
 }
 
