@@ -141,6 +141,10 @@
     float: right;
 }
 
+.selection-project-preview-cover img{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
 @media screen and (max-width: 900px){
     .selection-project-preview-cover{
         display: block;
