@@ -71,79 +71,73 @@
                         <img src="../../../../icons/down.svg" style="height: 100%;">
                     </div>
                     <div class="carousel">
-                        <img  src="../../../../images/research/4/01.png" alt="Image 1">
-                        <img style="background-color: black;" src="../../../../images/research/4/02.png" alt="Image 2">
-                        <img src="../../../../images/research/4/03.png" alt="Image 3">
-                        <img src="../../../../images/research/4/04.png" alt="Image 3">
-                        <img src="../../../../images/research/4/05.png" alt="Image 3">
-                        <img src="../../../../images/research/4/06.png" alt="Image 3">
-                        <img src="../../../../images/research/4/07.png" alt="Image 3">
+                        <img style="background-color: black;" src="../../../../images/research/6/01.JPG" alt="Image 1">
+                        <img style="background-color: black;" src="../../../../images/research/6/02.JPG" alt="Image 2">
+                        <img style="background-color: black;" src="../../../../images/research/6/03.JPG" alt="Image 3">
+                        <img style="background-color: black;" src="../../../../images/research/6/04.JPG" alt="Image 4">
+                        <img style="background-color: black;" src="../../../../images/research/6/05.JPG" alt="Image 5">
                         <!-- Add more images as needed -->
                     </div>
                 </div>
                 <div class="project-description">
                     <div class="auto1080">
-                        <h5 class="project-name">Tech Support Kiosk</h5>
+                        <h5 class="project-name">Sensorimotor Control in Virtual Reality</h5>
                         <dl class="detail clear">
                             <dt>
                                 <h6>
-                                    The project originated from the collaboration between the Georgia Institute of Technology's Human-Computer Interaction program and <a href="https://www.coxenterprises.com/" target="_blank">COX Enterprises</a>. The sponsor's requirement was to design a UX system for their technical support terminals' touchscreens and carry out evaluation and iteration. Our work primarily focused on three stages: user research, design development, and usability testing.
+                                    This project is my chief project at <a href="https://neuroloops.psych.gatech.edu/" target="_blank">NeuroLoops</a>, Georgia Tech. The objective of this study is to quantitatively model the sensorimotor control processes of hand movements and to employ real-time machine learning models for behavioral prediction. The ultimate goal is to predict performance outcomes before the completion of a dart-throwing action, thereby enabling the application of appropriate corrective stimuli to support user adaptation during the learning process. The research primarily consists of three components: the design of multimodal hardware devices, the development of real-time predictive models, and the design of a virtual reality closed-loop interaction system.
                                     <br>
                                     <br>
-                                    1. User Study<br>                                   
-                                    The core issues during the user research phase were twofold: first, optimizing the core functionality of the terminal for technical support, and second, identifying additional features that could be integrated into the terminal. We employed task decomposition, competitive product analysis, user surveys, semi-structured interviews, and diary studies to conduct our research. In total, we collected 18 user surveys and conducted 8 semi-structured interviews, from which we identified 6 user needs and 7 specific design goals.<br>
+                                    1. Design of Multimodal Hardware Devices<br>
+                                    We employ the Senso.me glove in combination with a Valve tracker to determine the world coordinates of finger joints. Computer vision methods were not adopted due to unresolved issues such as prediction jitter during rapid movements and the inability to capture actions outside the camera’s field of view. In addition, we independently developed and fabricated a 16-channel EMG wristband to collect electromyographic signals from the wrist flexor muscles. Concurrently, we recorded users’ eye positions, pupil diameters, and head positions within the VR environment to construct behavioral models.
                                     <br>
-                                    2. Design Development<br>
-                                    After defining the features based on the user research, we established an accessibility grid for the user interface according to ergonomic standards. This led to 2 design iterations. The first iteration focused on sketching out the functional design within the design team. During the second iteration, we introduced target tasks and feedback from one employee. After these 2 iterations, we finalized the high-fidelity design for the project and moved into the usability testing phase.<br>
                                     <br>
-                                    3. Usability Tests<br>
-                                    We conducted usability testing using both expert reviews and user tests. The experts included 3 team members from other COX teams and one from the Georgia Tech HCI project, who provided feedback using heuristic evaluation. For the user testing, we recruited 32 participants to perform task tests, eye-tracking, and complete the SUS usability questionnaire, with 12 participants providing interview feedback.
+                                    2. Development of Real-time Predictive Models<br>
+                                    We collected 30 minutes of motor performance data from 125 participants across six variables. Principal Component Analysis (PCA) was applied for feature dimensionality reduction, followed by convolutional neural networks (CNNs) for temporal feature extraction. Finally, a three-layer Long Short-Term Memory (LSTM) model was employed to predict the dart release timing.
                                     <br>
-                                    In quantifying user experience, we constructed an evaluation framework that integrated task completion time and eye-tracking metrics. The eye-tracking data was processed using entropy-based selection to aggregate micro-level metrics. Additionally, we analyzed the fixation points based on the previously defined accessibility grid, and found that the interface performed with 84.67% accessibility.
                                     <br>
-                                    The evaluation results indicated that the current user interface did not sufficiently address the needs of female users, with a usability rating of only 71.4% for this group. Based on the usability testing, we identified 15 specific improvement measures for further iteration.
+                                    3. Design of a Virtual Reality Closed-loop Interaction System<br>
+                                    We implemented corrective adjustments for eye movement behavior by providing a correction vector based on the previous outcome to facilitate user learning. In addition, we visualized the real-time predicted trajectory curve to further support the learning process.
                                 </h6>
                                  
-                                <!-- <div class="video-container">
+                                <div class="video-container">
                                     <iframe width="100%" aspect-ratio="16 / 9"
-                                        src="https://www.youtube.com/embed/InCq-b785Mg"
+                                        src="https://www.youtube.com/embed/nDjbGHDmizs"
                                         title="YouTube video player" 
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen>
                                     </iframe>
-                                </div> -->
-
-                                <div class="Figma-container">
+                                </div>
+                                <!-- <div class="Figma-container">
                                     <iframe style="border: none; background-color: black;" height= "100%"
                                     aspect-ratio= "9 / 16"
                                     src="https://embed.figma.com/proto/rHGs4PbGw0nakfIcmtwpd7/Psych-Research-Methods?node-id=1030-107&p=f&scaling=fit&content-scaling=auto&page-id=627%3A1765&starting-point-node-id=722%3A3316&show-proto-sidebar=0&embed-host=share" allowfullscreen></iframe>
-                                </div>                      
+                                </div>    -->
+                        
+                                
                             </dt>
                             <dd>
                                 <h6>
-                                    Keywords: Quantitative UX Research, Cognitive Load, Ergonomic Study, Eye-tracking<br>
-                                    Project Type: Sponsorship Project of Human-Computer Interaction Program, Georgia Institute of Technology<br>
+                                    Keywords: Brain-Computer Interaction, Virtual Reality, Human-Computer Interaction, Ubiquitous Computing<br>
+                                    Project Type: Project led by the NeuroLoops Laboratory at Georgia Institute of Technology
                                     <br>
-                                    Time: 2024.8-2024.12<br>
                                     <br>
-                                    Instructor: Dr.Carrie Bruce<br>
-                                    Collaborator: Christine Taylor、Isabella Sirianni、Jeremy Chen<br>
+                                    Time: 2025.1-Present<br>
+                                    <br>
+                                    Instructor: Dr.Tansu Celikel<br>
                                     <br>
                                     Main Contributions:<br>
-                                    1. Led semi-structured interviews with 5 employees during the user research phase, and recorded key points for 10 participants' semi-structured interviews during the design feedback and usability testing stages;<br>
-                                    2. Led a diary study with 2 employees, providing 2 design requirements for the design prototype;<br>
-                                    3. In the design prototype development phase, responsible for the initial design and 2 iterative designs of the "Tech Support" function interface;<br>
-                                    4. In the design prototype development phase, used AutoCAD, Adobe Suite, and Figma to evaluate the ergonomic design of the self-service terminal, and developed an accessibility grid system for desktop user interfaces, which resulted in 84.20% of users rating it as "accessibility-friendly" during usability testing;<br>
-                                    5. During the usability testing phase, constructed the evaluation framework through a literature review, and coordinated the division of labor and methods for the evaluation process;<br>
-                                    6. Led eye-tracking tests for 34 participants during the usability testing phase, processed the data using Python, and applied entropy selection methods to aggregate specific eye-tracking metrics into cognitive load indicators, identifying one function with an excessively high cognitive load.<br>
+                                    1. Independently developed a multi-modal VR dart-throwing training system using Python and C#, integrating Senso.me gloves (IMU), OpenBCI 16-channel EMG, 8-channel EEG, and Varjo headset for multi-modal motion data collection<br>
+                                    2. Independently designed and manufactured a TPU 3D-printed wrist stabilizer to reduce multi-modal input between hardware; implemented a damping system and hysteresis error recalibration method to effectively mitigate IMU sensor drift
                                     <br>
-                                    Skill: Figma、Python、Eye-tracking、Tableau<br>
+                                    <br>
+                                    Skill: C#, Python, Eye-Tracking, EEG, EMG, Signal Processing, Wearable Design<br>
                                 </h6>
                             </dd>
                         </dl>
                     </div>
-                    <div class="art-gallery">
+                    <!-- <div class="art-gallery">
                         <div class="auto1080">
                             <div id="grid-container">
                                 <div class="grid-item">
@@ -206,7 +200,7 @@
                                 <!-- 添加更多图片 -->
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="footer">The copyright and interpretation rights of this work belong to Junxiao Long. <span>Unauthorized reproduction or citation is prohibited.</span></div>
                 </div>
             </div>            
