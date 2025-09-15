@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../../../icons/WebsiteLogo.png" type="image/png">
+        <title>Dante's Website</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../../../../assets/navigationbar-project.CSS">
+        <link rel="stylesheet" href="../../../../assets/General.CSS">
+        <link rel="stylesheet" href="../../../../assets/project.CSS">
+
+
+    </head>
+    <body>
+        <div id="loader-container" class="loader-container">
+            <img class="cover-logo" id="loader" src="../../../../icons/cover_logo.gif">
+        </div>
+        <div class="page-container">
+            <div class="navigation-bar">
+                <div class="left">
+                    <a href="../../../zh/index.html"><img src="../../../../icons/home_icon.png"></a>
+                </div>
+                <div class="center">
+                    <a href="../../../zh/about/index.html">关于</a>
+                    <a href="../../../zh/design/index.html">设计</a>
+                    <a href="../../../zh/research/index.html">研究</a>
+                    <a href="../../../zh/media/index.html">媒体</a>
+                    <a href="../../../zh/sports/index.html">运动</a>
+                    <a href="../../../zh/others/index.html">其他</a>
+                </div>
+                <div class="right"> 
+                    <a href="../../../en/design/8/projectPage.html">EN</a>
+                    <h6>|</h6>
+                    <a href="../../../zh/design/8/projectPage.html">中文</a>
+                </div>
+                <div class="right" id="menu">
+                    <img id="openMenu" src="../../../../icons/menu-black.svg">
+                    <img id="closeMenu" src="../../../../icons/close.svg">
+                </div>
+            </div>
+            <div id="fixedPage" class="screen-navigation" style=" align-items: right;">
+                <div class="auto1080">
+                    <a href="../../../zh/about/index.html">关于</a>
+                    <a href="../../../zh/design/index.html">设计</a>
+                    <a href="../../../zh/research/index.html">研究</a>
+                    <a href="../../../zh/media/index.html">媒体</a>
+                    <a href="../../../zh/sports/index.html">运动</a>
+                    <a href="../../../zh/others/index.html">其他</a>
+                    <h6></h6>
+                    <div style="display: block;">
+                        <a href="../../../en/design/8/projectPage.html">EN</a>
+                        <a href="../../../zh/design/8/projectPage.html">中文</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page">
+                <div class="carousel-container">
+                    <button class="carousel-btn left" onclick="Left()">
+                        <img src="../../../../icons/arrow-left.png" style="height: 100%;">
+                    </button>
+                    <button class="carousel-btn right" onclick="scrollRight()">
+                        <img src="../../../../icons/arrow-right.png" style="height: 100%;">
+                    </button>
+                    <div class="arrow-down">
+                        <img src="../../../../icons/down.svg" style="height: 100%;">
+                    </div>
+                    <div class="carousel">
+                        <img src="../../../../images/design/8/01.png" alt="Image 1">
+                        <img src="../../../../images/design/8/02.png" alt="Image 2">
+                        <img style="background-color: black;" src="../../../../images/design/8/03.png" alt="Image 3">
+                        <img style="background-color: black;" src="../../../../images/design/8/04.png" alt="Image 4">
+                        <img style="background-color: black;" src="../../../../images/design/8/05.png" alt="Image 5">
+                        <img style="background-color: black;" src="../../../../images/design/8/06.png" alt="Image 6">
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="auto1080">
+                        <h5 class="project-name">多模态增强现实交互原型设计（PICO字节跳动实习</h5>
+                        <dl class="detail clear">
+                            <dt>
+                                <h6>
+                                    项目来源于本人在PICO字节跳动暑期实习内容。本次实习中，我的工作是对一款可穿戴混合现实产品以及其配件开发交互原型并验证交互体验。本人一共在工作中承担了四部分的工作：<br>
+                                    <br>
+                                    1.产品情景挖掘<br>
+                                    针对该可穿戴产品以及配件的主交互，我开展了日记式挖掘，对用户可能存在的交互行为按照日程时间顺序进行频率和重要性的评估，通过构建了一个熵增算法遴选出在频率或在重要性上显著的事件。并筛选出那些在频率或重要性并不显著，但在交互体验上有独特性的事件作为产品的主要场景。<br>
+                                    <br>
+                                    2.多模态交互原型开发<br>
+                                    本人针对手机滑动（基线交互），触摸滑条交互，计算机视觉手势识别，EMG手势识别以及语音交互搭建了多模态的交互原型。主要的项目难点在于计算机视觉手势识别针对不同个体的泛化性不足，触摸滑条没有硬件基础以及EMG手势识别的基础模型没有建立。针对计算机视觉手势识别针对不同个体的泛化性不足的问题，我们综合关节识别+规则约束的方法，在时间占比和幅度占比上同时约束手势模式，实现了92%以上的识别成功率。针对EMG手势识别的基础模型没有建立的问题，我们首先尝试了两种方式：<br>A. 小型数采并进行简单的5个手势的识别；<br>B.将设备通道和采样率插值与重采样，fit进meta的开源模型，进行实时识别。<br>但前两种方式的效果并不能达到工业级别，尽管在离线识别任务中，EMG能够达到92%左右的正确率，但是在实时分类任务中，几乎都是错误的，可能归因在于数据集不足覆盖实时交互的场景。第二条方法误识别的情况也很多。因此，我们采用了Arduino压力传感器的方式对手势进行了定义，实现对EMG的模拟。<br>
+                                    <br>
+                                    3.增强现实+AI原型开发<br>
+                                    针对第2步进行的多模态输入通道，我与搭档进行了增强现实上的AI交互原型的开发。我们调用了Magic Leap2的原生speaker，将原始音源输入豆包API实现文字识别，调用Magic Leap2的场景相机，给予Android程序调用抖音app的权限，实现了以关键词方式触发的功能。解决了Magic Leap2本身只支持英文语音交互的问题。<br>
+                                    <br>
+                                    4.EMG小型手势数据采集以及模型训练<br>
+                                    我们在字节跳动公司内部采集了15人一共6000条5种手势数据。对手势真实起点，我们采用了Expectation-Maximization的方式进行求解，将事件手势时间戳更精确地对齐到真实手势开始时间戳。通过复现meta的一层CNN，三层LSTM模型，配合论文中提到的梯度调节方式，实现了离线分类正确率大于92%的结果。<br>
+                                </h6>
+                                 
+                                <!--<div class="video-container">
+                                    <iframe width="100%" aspect-ratio="16 / 9"
+                                        src="https://www.youtube.com/embed/C1px5h9K3XM"
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>-->
+                                <div class="video-container">
+                                    <iframe width="100%" aspect-ratio="16 / 9"
+                                        src="https://www.youtube.com/embed/2US0NrgXMxY"
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                    <h6 style="padding-bottom: 1cm;">
+                                        一.多模态交互原型
+                                    </h6>
+                                </div>      
+                                
+                                <div class="video-container">
+                                    <iframe width="100%" aspect-ratio="16 / 9"
+                                        src="https://www.youtube.com/embed/eshyFgCBlJU"
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                    <h6 style="padding-bottom: 1cm;">
+                                        二.增强现实+AI交互原型
+                                    </h6>
+                                </div> 
+                            </dt>
+                            <dd>
+                                <h6>
+                                    设计类型: 多模态交互，AI交互，手指追踪，EMG分类，混合现实交互<br>
+                                    项目类型：PICO字节跳动暑期实习<br>
+                                    <br>
+                                    时间: 2025.5-2025.8<br>
+                                    <br>
+                                    指导：Ennin Huang、Biliang Wang<br>
+                                    <br>
+                                    主要贡献:<br>
+                                    1.融合 Python、C# 与 Swift，打通 Magic Leap、iOS、Windows 三端交互，集成语音、CV/EMG 手势、眼动与 Touch Bar多模态输入接口，实现统一事件机制与验证体系;<br>
+                                    2.基于计算机视觉算法训练 5 类手势识别模型，通过优化算法规则与参数，识别准确率提升 7%;<br>
+                                    3.采集 15 名被试共 6,000 条 EMG 手势样本，复现 Meta 模型训练流程，构建轻量 CNN+LSTM 模型，实现离线识别准确率 95%.<br>
+                                    <br>
+                                    技能：Deep Learning, Machine Learning, Bio-signal Processing, Python, PyTorch, Swift, Unity, WebSocket<br>
+                                </h6>
+                            </dd>
+                        </dl>
+                    </div> 
+                    <div class="art-gallery">
+                        <div class="auto1080">
+                            <div id="grid-container">
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/8/AG01.png" alt="Image 1">
+                                </div>
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/8/AG02.png" alt="Image 2">
+                                </div>
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/8/AG03.png" alt="Image 3">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG04.png" alt="Image 4">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG05.png" alt="Image 5">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG06.png" alt="Image 6">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG07.png" alt="Image 7">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG08.png" alt="Image 8">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG09.jpg" alt="Image 9">
+                                </div>
+                                <!-- 添加更多图片 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">作品版权及解释权归龙俊潇所有，<span>未经允许不得转载或引用</span></div>
+                </div>
+            </div>            
+        </div>
+        <div id="lightbox" class="hidden">
+            <button id="close-button">X</button>
+            <button id="prev-button">
+                <img src="../../../../icons/arrow-left.png">
+            </button>
+            <button id="next-button">
+                <img src="../../../../icons/arrow-right.png">
+            </button>
+            <img id="lightbox-image" src="" alt="Preview">
+        </div>
+        <script src="../../../../assets/project.js"></script>
+        <script src="../../../../assets/phoneScreen.js"></script>
+        <script src="../../../../assets/script.js"></script>
+    </body>
+
+</html>

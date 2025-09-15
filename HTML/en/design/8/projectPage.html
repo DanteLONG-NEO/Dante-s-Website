@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../../../icons/WebsiteLogo.png" type="image/png">
+        <title>Dante's Website</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../../../../assets/navigationbar-project.CSS">
+        <link rel="stylesheet" href="../../../../assets/General.CSS">
+        <link rel="stylesheet" href="../../../../assets/project.CSS">
+
+
+    </head>
+    <body>
+        <div id="loader-container" class="loader-container">
+            <img class="cover-logo" id="loader" src="../../../../icons/cover_logo.gif">
+        </div>
+        <div class="page-container">
+            <div class="navigation-bar">
+                <div class="left">
+                    <a href="../../../../index.html"><img src="../../../../icons/home_icon.png"></a>
+                </div>
+                <div class="center">
+                    <a href="../../../en/about/index.html">About</a>
+                    <a href="../../../en/design/index.html">Design</a>
+                    <a href="../../../en/research/index.html">Research</a>
+                    <a href="../../../en/media/index.html">Media</a>
+                    <a href="../../../en/sports/index.html">Sports</a>
+                    <a href="../../../en/others/index.html">Others</a>
+                </div>
+                <div class="right"> 
+                    <a href="../../../en/design/8/projectPage.html">EN</a>
+                    <h6>|</h6>
+                    <a href="../../../zh/design/8/projectPage.html">中文</a>
+                </div>
+                <div class="right" id="menu">
+                    <img id="openMenu" src="../../../../icons/menu-black.svg">
+                    <img id="closeMenu" src="../../../../icons/close.svg">
+                </div>
+            </div>
+            <div id="fixedPage" class="screen-navigation" style=" align-items: right;">
+                <div class="auto1080">
+                    <a href="../../../en/about/index.html">About</a>
+                    <a href="../../../en/design/index.html">Design</a>
+                    <a href="../../../en/research/index.html">Research</a>
+                    <a href="../../../en/media/index.html">Media</a>
+                    <a href="../../../en/sports/index.html">Sports</a>
+                    <a href="../../../en/others/index.html">Others</a>
+                    <h6></h6>
+                    <div style="display: block;">
+                        <a href="../../../en/design/8/projectPage.html">EN</a>
+                        <a href="../../../zh/design/8/projectPage.html">中文</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page">
+                <div class="carousel-container">
+                    <button class="carousel-btn left" onclick="Left()">
+                        <img src="../../../../icons/arrow-left.png" style="height: 100%;">
+                    </button>
+                    <button class="carousel-btn right" onclick="scrollRight()">
+                        <img src="../../../../icons/arrow-right.png" style="height: 100%;">
+                    </button>
+                    <div class="arrow-down">
+                        <img src="../../../../icons/down.svg" style="height: 100%;">
+                    </div>
+                    <div class="carousel">
+                        <img src="../../../../images/design/8/01.png" alt="Image 1">
+                        <img src="../../../../images/design/8/02.png" alt="Image 2">
+                        <img style="background-color: black;" src="../../../../images/design/8/03.png" alt="Image 3">
+                        <img style="background-color: black;" src="../../../../images/design/8/04.png" alt="Image 4">
+                        <img style="background-color: black;" src="../../../../images/design/8/05.png" alt="Image 5">
+                        <img style="background-color: black;" src="../../../../images/design/8/06.png" alt="Image 6">
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="auto1080">
+                        <h5 class="project-name">Multimodal Augmented Reality Interaction Prototype Design (Internship at PICO, ByteDance)</h5>
+                        <dl class="detail clear">
+                            <dt>
+                                <h6>
+                                    This project originates from my summer internship at PICO, ByteDance. During the internship, I was responsible for developing interaction prototypes for a wearable mixed reality product and its accessories, as well as evaluating the user experience. My contributions can be divided into four main areas:<br>
+                                    <br>
+                                    1. Product Context Exploration<br>
+                                    For the primary interactions of the wearable product and its accessories, I conducted a diary-based exploration of user behaviors. User interactions were logged in chronological order, and their frequency and significance were evaluated. Using an entropy-based algorithm, I identified events that were significant either in frequency or importance. Additionally, I selected events that were not prominent in frequency or importance but offered unique interaction experiences to define the product’s key usage scenarios.<br>
+                                    <br>
+                                    2. Multimodal Interaction Prototype Development<br>
+                                    I built multimodal interaction prototypes incorporating smartphone swipe (baseline interaction), touch slider interaction, computer vision (CV) gesture recognition, EMG gesture recognition, and voice interaction. The main technical challenges included:<br>
+                                    A.Limited generalization of CV-based gesture recognition across different users;<br>
+                                    B.Lack of hardware support for touch slider interaction;<br>
+                                    C.Absence of a baseline model for EMG gesture recognition.<br>
+                                    To address the CV generalization issue, we combined joint detection with rule-based constraints, simultaneously restricting gestures in terms of time and amplitude proportions, achieving over 92% recognition accuracy.<br>
+                                    For EMG gesture recognition, we initially explored two approaches:
+                                    A. Small-scale data collection for recognition of 5 simple gestures;<br>
+                                    B. Interpolating device channels and sampling rates to fit a Meta open-source model for real-time recognition.<br>
+                                    However, neither approach achieved industrial-grade performance. Although offline EMG recognition reached ~92% accuracy, real-time classification frequently failed, likely due to insufficient dataset coverage. Approach B also produced many misclassifications.<br>
+                                    To overcome this, we defined gestures using Arduino pressure sensors, effectively simulating EMG signals for robust real-time interaction.<br>
+                                    <br>
+                                    3. Augmented Reality + AI Prototype Development<br>
+                                    For the multimodal input channels developed in Step 2, my teammate and I created an AR-based AI interaction prototype. We utilized the native speaker on Magic Leap 2 to capture audio, sending the raw input to the Douban API for speech-to-text conversion. Using the Magic Leap 2 scene camera, we enabled an Android application to interact with the TikTok app, triggering functions based on specific keywords. This approach successfully addressed the limitation of Magic Leap 2, which natively supports English-only voice interactions, allowing for multilingual functionality in our prototype.<br>
+                                    <br>
+                                    4. Small-Scale EMG Gesture Data Collection and Model Training<br>
+                                    Within ByteDance, we collected EMG data from 15 participants, totaling 6,000 samples across 5 gestures. To determine the true start time of each gesture, we applied the Expectation-Maximization (EM) algorithm to align event timestamps more precisely with the actual gesture onset. By replicating Meta’s single-layer CNN and three-layer LSTM model, combined with the gradient modulation techniques described in the paper, we achieved over 92% accuracy in offline classification.<br>
+                                </h6>
+                                 
+                                <!--<div class="video-container">
+                                    <iframe width="100%" aspect-ratio="16 / 9"
+                                        src="https://www.youtube.com/embed/C1px5h9K3XM"
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>-->
+                                <div class="video-container">
+                                    <iframe width="100%" aspect-ratio="16 / 9"
+                                        src="https://www.youtube.com/embed/2US0NrgXMxY"
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                    <h6 style="padding-bottom: 1cm;">
+                                       1.   Multimodal Interaction Demo
+                                    </h6>
+                                </div>      
+                                
+                                <div class="video-container">
+                                    <iframe width="100%" aspect-ratio="16 / 9"
+                                        src="https://www.youtube.com/embed/eshyFgCBlJU"
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                    <h6 style="padding-bottom: 1cm;">
+                                        2.  Augmented Reality + AI Prototype Development
+                                    </h6>
+                                </div> 
+                            </dt>
+                            <dd>
+                                <h6>
+                                    Design Type:  Multi-modal Interaction,  AI Interaction, Finger Tracking, EMG Classification, Mixed Reality Interaction<br>
+                                    Project Type: Interniship Program<br>
+                                    <br>
+                                    Time: 2025.5-2025.8<br>
+                                    <br>
+                                    Instructor: Ennin Huang、Biliang Wang<br>
+                                    <br>
+                                    Main Contributions:<br>
+                                    1.  Integrated Python, C#, and Swift to enable cross-platform interactions across Magic Leap, iOS, and Windows; developed multi-modal input interfaces (voice, CV/EMG gestures, eye-tracking, and Touch Bar) with a unified event handling and validation framework;<br>
+                                    2.  Trained Computer Vision models for 5 gesture classes and optimized parameters to improve real-time recognition accuracy by 10%;<br>
+                                    3.  Collected 6,000 EMG gesture samples from 15 participants and reproduced Meta's training pipeline to build a lightweight CNN+LSTM model achieving 95% offline recognition accuracy;<br>
+                                    4.  Resampled 500Hz EMG wristband data to 16 channels at 2000Hz via channel interpolation and spline-curve resampling; implemented real-time gesture recognition with 67% accuracy.<br>
+                                    <br>
+                                    Skills: Deep Learning, Machine Learning, Bio-signal Processing, Python, PyTorch, Swift, Unity, WebSocket<br>
+                                </h6>
+                            </dd>
+                        </dl>
+                    </div> 
+                    <div class="art-gallery">
+                        <div class="auto1080">
+                            <div id="grid-container">
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/8/AG01.png" alt="Image 1">
+                                </div>
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/8/AG02.png" alt="Image 2">
+                                </div>
+                                <div class="grid-item">
+                                  <img src="../../../../images/design/8/AG03.png" alt="Image 3">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG04.png" alt="Image 4">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG05.png" alt="Image 5">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG06.png" alt="Image 6">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG07.png" alt="Image 7">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG08.png" alt="Image 8">
+                                </div>
+                                <div class="grid-item">
+                                    <img src="../../../../images/design/8/AG09.jpg" alt="Image 9">
+                                </div>
+                                <!-- 添加更多图片 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">The copyright and interpretation rights of this work belong to Junxiao Long. <span>Unauthorized reproduction or citation is prohibited.</span></div>
+                </div>
+            </div>            
+        </div>
+        <div id="lightbox" class="hidden">
+            <button id="close-button">X</button>
+            <button id="prev-button">
+                <img src="../../../../icons/arrow-left.png">
+            </button>
+            <button id="next-button">
+                <img src="../../../../icons/arrow-right.png">
+            </button>
+            <img id="lightbox-image" src="" alt="Preview">
+        </div>
+        <script src="../../../../assets/project.js"></script>
+        <script src="../../../../assets/phoneScreen.js"></script>
+        <script src="../../../../assets/script.js"></script>
+    </body>
+
+</html>
