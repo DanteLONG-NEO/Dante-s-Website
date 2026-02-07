@@ -20,22 +20,22 @@
 
 @keyframes backgroundSlider {
     0% {
-        background-image: url('../images/projectCovers/0.png');
+        background-image: url('/images/projectCovers/0.png');
     }
     20% {
-        background-image: url('../images/projectCovers/R4.png');
+        background-image: url('/images/projectCovers/R7.png');
     }
     40% {
-        background-image: url('../images/projectCovers/2.png');
+        background-image: url('/images/projectCovers/R6-1.png');
     }
     60% {
-        background-image: url('../images/projectCovers/D6.png');
+        background-image: url('/images/projectCovers/D8.png');
     }
     80% {
-        background-image: url('../images/projectCovers/1.png');
+        background-image: url('/images/projectCovers/1.png');
     }
     100% {
-        background-image: url('../images/projectCovers/D5.png');
+        background-image: url('/images/projectCovers/D5.png');
     }
     
 }
